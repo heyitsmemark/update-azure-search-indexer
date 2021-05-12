@@ -10,7 +10,7 @@ Update an indexer using a local definition file:
 
 ```yaml
 - name: Update indexer
-  uses: heyitsmemark/update-azure-search-indexer@main
+  uses: heyitsmemark/update-azure-search-indexer@1.0.0
   with:
     azureSearchInstance: plop
     azureSearchAdminKey: ${{ secrets.AZURE_SEARCH_ADMIN_KEY }}
@@ -22,7 +22,7 @@ Update an indexer using a remote definition file:
 
 ```yaml
 - name: Update indexer 
-  uses: heyitsmemark/update-azure-search-indexer@main
+  uses: heyitsmemark/update-azure-search-indexer@1.0.0
   with:
     azureSearchInstance: plop
     azureSearchAdminKey: ${{ secrets.AZURE_SEARCH_ADMIN_KEY }}
