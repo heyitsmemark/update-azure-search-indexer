@@ -48,7 +48,8 @@ if test "$DEFINITION_IS_LOCAL" = true; then
     exit 1
   fi
 else
-  DEFINITION=$(curl --silent $DEFINITION_LOCATION)
+  echo "Downloading definition file: ${DEFINITION_LOCATION}..."
+  DEFINITION=$(curl --fail-with-body -sSD/dev/stderr $DEFINITION_LOCATION)
   if test "$?" != "0"; then
     echo "the curl command failed with: $?"
     exit 1
