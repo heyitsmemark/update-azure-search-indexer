@@ -1,0 +1,8 @@
+{
+    "name" : "indexer-plop",  
+    "description" : "",  
+    "dataSourceName" : "datasource-plop",  
+    "targetIndexName" : "plop",
+    "schedule" : { "interval" : "P1D", "startTime" : "2021-05-12T00:00:00Z" },  
+    "parameters" : { "maxFailedItems" : 0, "maxFailedItemsPerBatch" : 0 }  
+}

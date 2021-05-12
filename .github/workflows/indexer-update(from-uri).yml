@@ -1,0 +1,16 @@
+name: indexer-update-from-uri
+
+on:
+  workflow_dispatch:
+
+jobs:
+  update-indexer:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: heyitsmemark/update-azure-search-indexer@main
+        with:
+          azureSearchInstance: plop
+          azureSearchAdminKey: ${{ secrets.AZURE_SEARCH_ADMIN_KEY }}
+          indexerName: indexer-plop
+          indexerDefinitionUri: https://plopstorage.blob.core.windows.net/public/indexer.json
